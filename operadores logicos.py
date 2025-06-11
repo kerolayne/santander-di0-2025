@@ -20,4 +20,12 @@ print(expressao2)  # Verifica se o saldo é suficiente para o saque considerando
 # Operadores de identidade
 print("Operadores de identidade")
 print(saldo is saque)  # Verifica se saldo e saque são o mesmo objeto (False)
-print(saldo is not saque)  # Verifica se saldo e saque não são o mesmo objeto (True)    
+print(saldo is not saque)  # Verifica se saldo e saque não são o mesmo objeto (True)  
+
+# Operadores de associação
+print("Operadores de associação")
+lista = [1, 2, 3, 4, 5]
+print(1 in lista)  # Verifica se 1 está na lista (True)
+print(6 in lista)  # Verifica se 6 está na lista (False)
+print(1 not in lista)  # Verifica se 1 não está na lista (False)
+print(6 not in lista)  # Verifica se 6 não está na lista (True)
