@@ -15,3 +15,12 @@ menu = "python"
 print("####" + menu + "####")  # Concatena "####" com a string "python": ####python####)
 print(menu.center(20, "#"))  # Centraliza a string "python" em um campo de 20 caracteres, preenchendo com "#": #######python#######
 print("-".join(menu))  # Junta os caracteres da string "python" com "-" entre eles: p-y-t-h-o-n
+
+#=---------------------------------------------
+
+#formatação de strings
+profissao = "Programadora"
+linguagem = "Python e JavaScript"
+print(f"Eu sou {profissao} e estou aprendendo {linguagem}.")  # Formatação com f-strings
+print("Eu sou {} e estou aprendendo {}.".format(profissao, linguagem))  # Formatação com .format()
+print("Eu sou %s e estou aprendendo %s." % (profissao, linguagem))  # Formatação com % (antiga)
