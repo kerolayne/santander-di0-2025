@@ -29,3 +29,6 @@ print(1 in lista)  # Verifica se 1 está na lista (True)
 print(6 in lista)  # Verifica se 6 está na lista (False)
 print(1 not in lista)  # Verifica se 1 não está na lista (False)
 print(6 not in lista)  # Verifica se 6 não está na lista (True)
+
+x=(22 - 10) * 3
+print(x)  # Resultado da expressão (36)
