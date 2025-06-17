@@ -1,3 +1,3 @@
 frutas = []
 
-letras = [a,b,c,d,e,]
+letras = [a,b,c,d,e]
