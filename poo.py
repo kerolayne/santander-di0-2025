@@ -15,6 +15,9 @@ class bicicleta:
     def pedalar(self):
         print("Pedalando a bicicleta!")
 
+    def  __del__(self):
+        print("Bicicleta foi destruída!")
+
 bicicleta1 = bicicleta("azul", "mountain", 2020, 1500.00)
 
 bicicleta1.buzinar()
