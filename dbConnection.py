@@ -36,7 +36,7 @@ def consultar_dados():
     rows = cur.fetchall()
     for row in rows:
         print(row)
-consultar_dados()
+#consultar_dados()
 #fechar a conexão
 def fechar_conexao():
     cur.close()
@@ -55,7 +55,34 @@ def deletar_dados(con, cur, id):
 atualizar_dados(con, cur, 1, "Alice", 31)
 deletar_dados(con, cur, 2)
 # Consultar novamente para verificar as alterações
+#consultar_dados()
+
+#inserir dados em lote
+def inserir_dados_em_lote(dados):
+    cur.executemany("INSERT INTO example (name, age) VALUES (?, ?)", dados)
+    commit_changes()
+
+# Exemplo de uso da função de inserção em lote
+dados = [
+    ("Charlie", 35),
+    ("David", 40),
+    ("Eva", 28)
+]
+inserir_dados_em_lote(dados)
+
+# consultar somente um dado 
+
+def consultar_um_dado(id):
+    cur.execute("SELECT * FROM example WHERE id = ?", (id,))
+    row = cur.fetchone()
+    if row:
+        print(row)
+    else:
+        print("Nenhum dado encontrado com o ID:", id)
+
+
+
+consultar_um_dado(1)
 consultar_dados()
-
-
+# Fechar a conexão ao final
 fechar_conexao()
