@@ -82,6 +82,16 @@ def consultar_um_dado(id):
 
 
 
+#gerenciar transações
+
+try:
+    inserir_dados("Frank", 45)
+    inserir_dados(2,"Grace", 50)
+    commit_changes()
+except Exception as exc:
+    print("Erro ao inserir dados:", exc)
+    con.rollback()
+
 consultar_um_dado(1)
 consultar_dados()
 # Fechar a conexão ao final
