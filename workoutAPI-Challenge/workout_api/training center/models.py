@@ -10,4 +10,4 @@ class TrainingCenterModel(BaseModel):
     nome: Mapped[str] = mapped_column(String(100), nullable=False)
     endereco: Mapped[str] = mapped_column(String(255), nullable=False)
     proprietario: Mapped[str] = mapped_column(String(100), nullable=False)
-    
+    atletas: Mapped[list['Atleta']] = relationship('Atleta', back_populates='centro_treinamento')
