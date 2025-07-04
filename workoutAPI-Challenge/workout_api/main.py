@@ -1,5 +1,7 @@
-from pdb import main
+
+
 from fastapi import FastAPI
+from workout_api.routers import api_router
 
-app = FastAPI(title="Workout API", description="API for managing workout routines and exercises", version="1.0.0")
-
+app = FastAPI(title='WorkoutApi')
+app.include_router(api_router)
